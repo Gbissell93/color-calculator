@@ -2,7 +2,7 @@
 const prompt = require("prompt-sync")();
 
 //set input prompt
-const colorIn = prompt("Would you like to Combine or deconstruct colors? ");
+const colorIn = prompt("Would you like to Combine or deconstruct colors? (Presse 'c' for combine or 'd' for 'deconstruction': ");
 
 //set combine and deconstruct inputs
 const combine = "c";
@@ -45,24 +45,16 @@ else if (colorIn.includes(combine)) {
     const optionC = prompt("please select first color. ");
     const optionC2 =prompt("Please select second color. ");
 
-    if (optionC == red && optionC2 == blue)
+    if (optionC == red && optionC2 == blue || optionC == blue && optionC2 == red)
     console.log(purple);
 
-    else if (optionC == red && optionC2 == yellow)
+    else if (optionC == red && optionC2 == yellow || optionC == yellow && optionC2 == red)
     console.log(orange)
 
-    else if (optionC == blue && optionC2 == yellow)
+    else if (optionC == blue && optionC2 == yellow || optionC == yellow && optionC2 == blue)
     console.log(green)
     
-    else if (optionC == yellow && optionC2 == blue)
-    console.log(green)
-
-    else if (optionC == yellow && optionC2 == red)
-    console.log(orange)
-
-    else if (optionC == blue && optionC2 == red)
-    console.log(purple);
-
+    
     else {
         console.log("error. please enter valid combination.")
     }
